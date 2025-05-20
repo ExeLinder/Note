@@ -8,11 +8,12 @@ namespace Note
 {
     internal class Note
     {
-        private static void PrintFile(string path)
+        private void PrintFile(string path)
         {
             if (!File.Exists(path))
             {
                 Console.WriteLine($"файл не знайдено: {path}");
+                return;
             }
             string[] lines = File.ReadAllLines(path);
             Console.WriteLine($"Вміст файлу \"{path}\":\n");
