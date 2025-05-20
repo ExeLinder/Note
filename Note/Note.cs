@@ -8,9 +8,19 @@ namespace Note
 {
     internal class Note
     {
-        private void PrintFile(string path) { }
-        private void WriteFile(string path) { }
-        private void ShowFiles() { }
-        public void Menu() { }
+        private void PrintFile(string path)
+        {
+            if (!File.Exists(path))
+            {
+                Console.WriteLine($"файл не знайдено: {path}");
+                return;
+            }
+            string[] lines = File.ReadAllLines(path);
+            Console.WriteLine($"Вміст файлу \"{path}\":\n");
+            foreach (string line in lines)
+            {
+                Console.WriteLine(line);
+            }
+        }
     }
 }
