@@ -9,9 +9,16 @@ namespace Note
     internal class Note
     {
 
-        private void PrintFile(string path) { }
-        private void WriteFile(string path) { }
-        private void ShowFiles() { }
+        private void ShowFiles()
+        {
+            string[] files = Directory.GetFiles(Directory.GetCurrentDirectory());
+
+            Console.WriteLine("List of notes:");
+            foreach (var file in files)
+            {
+                Console.WriteLine("- " + file);
+            }
+      }
         public void Menu()
         {
             while (true)
