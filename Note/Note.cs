@@ -20,7 +20,7 @@ namespace Note
                 Console.WriteLine("2 — Дописать в конец");
                 Console.WriteLine("3 — Посмотреть содержимое файла");
 
-                choice = Console.ReadLine();
+                choice = Console.ReadLine()!;
 
                 if (choice == "3")
                 {
@@ -61,7 +61,7 @@ namespace Note
             }
 
             Console.WriteLine("\nВведите текст:");
-            string text = Console.ReadLine();
+            string text = Console.ReadLine()!;
 
             try
             {
@@ -81,8 +81,6 @@ namespace Note
                 Console.WriteLine("Ошибка: " + ex.Message);
             }
         }
-    }
-
 
         private void ShowFiles()
         {
@@ -94,6 +92,7 @@ namespace Note
                 Console.WriteLine("- " + file);
             }
       }
+
         public void Menu()
         {
             while (true)
