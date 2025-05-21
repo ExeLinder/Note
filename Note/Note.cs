@@ -82,10 +82,6 @@ namespace Note
             }
         }
 
-        public void Menu()
-        {
-            WriteFile("note.txt"); // запишет в файл note.txt в текущей папке
-        }
 
     }
 }
